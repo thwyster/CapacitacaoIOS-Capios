@@ -45,7 +45,6 @@ class CreateAccountViewController: UIViewController {
         
         self.alert.title = R.string.main.createAccountAlertTitle()
         self.alert.message = R.string.main.createAccountAlertMsg()
-        
         self.alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         
         //Função onde são realizados os binds de Rx

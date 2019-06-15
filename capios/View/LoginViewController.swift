@@ -10,10 +10,16 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var btnLogin: UIButton!
     
     let disposeBag: DisposeBag = DisposeBag()
+    let alert : UIAlertController = UIAlertController (
+        title: nil,
+        message: nil,
+        preferredStyle: .alert )
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = R.string.main.loginViewTitle()
+        self.alert.title = "Login"
+        self.alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         
         btnLogin.rx.tap.subscribe(onNext: {
             [weak self] in
@@ -29,11 +35,13 @@ class LoginViewController: UIViewController {
             {
                 if username == _usernameTextField && password == _passwordTextField
                 {
-                    print("Success")
+                    self.alert.message = "DEU BOA -> Manda pra tela de MENU"
+                    self.present(self.alert, animated: true)
                 }
                 else
                 {
-                    print("Failed")
+                    self.alert.message = R.string.main.loginViewMsg()
+                    self.present(self.alert, animated: true)
                 }
             }
         }).disposed(by: disposeBag)
