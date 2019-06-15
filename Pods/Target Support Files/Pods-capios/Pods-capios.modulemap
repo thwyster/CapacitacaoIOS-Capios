@@ -1,0 +1,6 @@
+framework module Pods_capios {
+  umbrella header "Pods-capios-umbrella.h"
+
+  export *
+  module * { export * }
+}

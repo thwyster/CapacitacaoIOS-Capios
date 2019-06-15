@@ -1,0 +1,16 @@
+/* 
+  main.strings
+  capios
+
+  Created by PUCPR on 12/06/19.
+  Copyright © 2019 Adriano. All rights reserved.
+*/
+"homeViewTitle" = "App Exercícios";
+"createAccountViewTitle" = "Criar Conta";
+"loginViewTitle" = "Entrar";
+"valetUsername" = "username";
+"valetPassword" = "password";
+"createAccountAlertTitle" = "Conta Criada";
+"createAccountAlertMsg" = "Conta criada com sucesso.";
+"loginViewMsg" = "Usuário e/ou senha não encontrado";
+"valetIdentifier" = "Database";
